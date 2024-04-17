@@ -75,4 +75,44 @@ const products = [
    return {averagePrice};
   }
 
+  // task6  0 - 100 arası yalnız sadə ədədləri console'da çap edin
+
+  for (let i = 2; i <= 100; i++) {
+    let isPrime = true;
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        isPrime = false;
+        break;
+      }
+    }
   
+    if (isPrime) {
+      console.log(i);
+    }
+  }
+
+  // # product arrayindəki producların qiymətləri cəmini və ortalamasını tapın\
+
+  let sumOfPrices = 0;
+  for (let i = 0; i < products.length; i++) {
+    sumOfPrices += products[i].price;
+  }
+  
+  console.log("SUM: ", sumOfPrices);
+  console.log("AVERAGE: ", sumOfPrices / products.length);
+  
+  let countries = ["Azerbaijan", "Albania", "Germany", "America", "Russian"];
+
+
+  //   countries arrayində a ilə başlayıb a ilə bitən ölkələri tapın
+
+for (let i = 0; i < countries.length; i++) {
+  if (
+    countries[i].toLowerCase()[0] === "a" &&
+    countries[i].toLowerCase()[countries[i].length - 1] === "a"
+  ) {
+    console.log(countries[i]);
+  }
+}
+  
+
